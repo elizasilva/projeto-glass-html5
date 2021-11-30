@@ -36,7 +36,7 @@
                     <h3 class="direita">Atualizado em 01/Maio/2013</h3>
                 </hgroup>
             </header>
-            <form>
+            <form method="post" id="fContato" action="mailto:exexplo@teste.com.br">
                 <fieldset id="usuario">
                     <legend>Identificação do Usuário</legend>
                         <p><label for="cNome"> Nome:</label><input type="text" name="tNome" id="cNome" size="30" maxlength="35" placeholder="Nome Completo"/></p>
@@ -53,20 +53,62 @@
                     <legend id="endereco">Endereço do Usuário</legend>
                       <p><label for="cRua">Logradouro: </label><input type="text" name="tRua" id="cRua" size="30" maxlength="35" placeholder="Rua, Av, Travesa, KM..."/> </p>
                       <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="10" max="20"/></p>
-                      <p>Estado:</p>
-                      <p>Cidade:</p>
+                      <p><label for="cEst">Estado:</label></p>
+                        <select name="tEst" id="cEst">
+                            <optgroup label="Região Nordeste">
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernanbuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="SE">Sergipe</option>
+                            </optgroup>
+                            <optgroup label="Região Norte">
+                                <option value="AC">Acre</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="PA">Pará</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="PR">Roraima</option>
+                                <option value="TO">Tocantins</option>
+                            </optgroup>
+                        </select>
+                      <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="15" maxlength="20" placeholder="Sua Cidade" list="cidades"/></p>
+                      <datalist id="cidades">
+                          <option value="Aracaju"></option>
+                          <option value="Belém"></option>
+                          <option value="Boa Vista"></option>
+                          <option value="Fortaleza"></option>
+                          <option value="João Pessoa"></option>
+                          <option value="Macapá"></option>
+                          <option value="Maceió"></option>
+                          <option value="Manaus"></option>
+                          <option value="Natal"></option>
+                          <option value="Palmas"></option>
+                          <option value="Porto Velho"></option>
+                          <option value="Recife"></option>
+                          <option value="Rio Branco"></option>
+                          <option value="Salvador"></option>
+                          <option value="São Luís"></option>
+                          <option value="Teresina"></option>
+                      </datalist>
                 </fieldset>
                 <fieldset>
                     <legend id="mensagem">Mensagem do Usuário</legend>
-                        <p>Grau de Urgência:</p>
-                        <p>Mensagem:</p>
+                        <p><label for="cUrg">Grau de Urgência:</label>
+                            Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx
+                        </p>
+                        <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="50" rows="5" placeholder="Deixe aqui sua mensagem."></textarea> </p>
                 </fieldset>
                 <fieldset>
                     <legend id="pedido">Quero um Google Glass</legend>
-                        <p>Gostaria de adquirir um Google Glass quando disponível</p>
-                        <p>Cor:</p>
-                        <p>Quantidade:</p>
-                        <p>Preço Total: R$</p>
+                        <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <p><label for="cCor">Cor:</label></p>
+                        <p><label for="cQtd">Quantidade:</label></p>
+                        <p><label for="Tot">Preço Total: R$</label></p>
             </fieldset>
 
             [BOTÃO ENVIAR]
