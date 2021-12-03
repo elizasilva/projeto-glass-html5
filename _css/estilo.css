@@ -35,7 +35,7 @@ a:hover {
 
 header#cabecalho img#icone {
     position: absolute;
-    left: 780px;
+    left: 950px;
     top: 70px;
 }
 
@@ -99,7 +99,7 @@ nav#menu ul {
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: 300px;
+    left: 470px;
 }
 
 nav#menu li {
@@ -226,6 +226,11 @@ aside#lateral h2 {
     font-size: 13pt;
     color: white;
     padding: 5px;
+}
+
+div#video-2 video#filme2 {
+    width: 350px;
+    height: 196px;
 }
 
 footer#rodape {
